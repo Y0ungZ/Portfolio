@@ -21,14 +21,13 @@
   --font-micro:14px;
 
   /* Font weight */
-  --weight-bold: 700;
-  --weight-semi-bold: 600;
+  --weight-bold: 800;
+  --weight-semi-bold: 700;
   --weight-regular:400;
   /* Size */
 
 }
 /* Font - naver 나눔스퀘어 사용. */
-@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
 body {
   font-family: 'NanumSquare', sans-serif;
 }
@@ -36,4 +35,30 @@ body {
 /* Universal tags*/
 *{
   box-sizing: border-box;
+}
+
+/* Typography */
+h1{
+  font-size:var(--font-large);
+  font-weight: var(--weight-bold);
+  color: var(--color-black);
+  margin: 16px 0px;
+}
+h2{
+  font-size: var(--font-medium);
+  font-weight: var(--weight-semi-bold);
+  color: var(--color-black);
+  margin: 8px 0px;
+}
+h3{
+  font-size: var(--font-regular);
+  font-weight: var(--weight-regular);
+  color:var(--color-black);
+  margin: 8px 0px;
+}
+p{
+  font-size: var(--font-regular);
+  font-weight: var(--weight-regular);
+  color:var(--color-black);
+  margin: 4px 0px;
 }
