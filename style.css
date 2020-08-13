@@ -12,6 +12,7 @@
   --color-light-blue:#84a9ac;
   --color-soft:#e7dfd5;
   --color-black:#000000;
+  --color-ocean:rgb(33,36,57);
 
   /* Font size */
   --font-large:48px;
@@ -25,16 +26,28 @@
   --weight-semi-bold: 700;
   --weight-regular:400;
   /* Size */
-
-}
-/* Font - naver 나눔스퀘어 사용. */
-body {
-  font-family: 'NanumSquare', sans-serif;
+  --size-border-radius:4px;
 }
 
 /* Universal tags*/
 *{
   box-sizing: border-box;
+}
+
+body{
+  font-family: 'NanumSquare', sans-serif;
+  margin:0;
+  cursor: default;
+}
+
+a{
+  text-decoration: none;
+  color: var(--color-white);
+}
+
+ul{
+  list-style: none;
+  padding-left: 0;
 }
 
 /* Typography */
@@ -61,4 +74,36 @@ p{
   font-weight: var(--weight-regular);
   color:var(--color-black);
   margin: 4px 0px;
+}
+
+/* Navbar */
+
+#navbar{
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--color-ocean);
+  align-items: center;
+  padding:16px;
+}
+.navbar__menu{
+  display: flex;
+}
+.navbar__logo{
+  font-size: var(--font-medium);
+  font-weight: var(--weight-semi-bold);
+}
+.navbar__menu__item{
+  padding: 8px 12px;
+  margin: 0 4px;
+  color: var(--color-white);
+  cursor: pointer;
+  border-radius: var(--size-border-radius);
+}
+
+.navbar__menu__item.active{
+  border:1px solid var(--color-white);
+}
+
+.navbar__menu__item:hover{
+  background-color: var(--color-blue);
 }
