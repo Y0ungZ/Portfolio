@@ -30,7 +30,6 @@ navbarMenu.addEventListener("click", (event) => {
 });
 
 // contact me 버튼 클릭시 contact section으로 이동.
-
 const homeContactBtn = document.querySelector(".home__contact");
 homeContactBtn.addEventListener("click", (event) => {
   scrollIntoView("#contact");
@@ -41,4 +40,18 @@ const home = document.querySelector(".home__container");
 const homeHeight = home.getBoundingClientRect().height;
 document.addEventListener("scroll", () => {
   home.style.opacity = 1 - window.scrollY / homeHeight;
+});
+
+// 일정 스크롤링 시 arrow-up 버튼 나타나기.about__majors
+const arrowUp = document.querySelector(".arrow-up");
+document.addEventListener("scroll", () => {
+  if (window.scrollY > homeHeight / 2) {
+    arrowUp.classList.add("visible");
+  } else {
+    arrowUp.classList.remove("visible");
+  }
+});
+
+arrowUp.addEventListener("click", () => {
+  scrollIntoView("#home");
 });
