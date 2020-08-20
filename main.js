@@ -68,6 +68,16 @@ workBtnContainer.addEventListener("click", (event) => {
   if (filter == null) {
     return;
   }
+
+  // 이전 선택아이템에서 새로 클릭된 아이템으로 액티브이동.
+  const active = document.querySelector(".category__btn.selected");
+  active.classList.remove("selected");
+  const target =
+    event.target.nodeName === "BUTTON"
+      ? event.target
+      : event.target.parentNode.target;
+  target.classList.add("selected");
+
   projectContainer.classList.add("anime-out");
 
   setTimeout(() => {
