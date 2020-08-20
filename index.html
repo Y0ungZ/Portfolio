@@ -171,16 +171,16 @@
         <h1>My work</h1>
         <h3>Projects</h3>
         <div class="work__categories">
-          <button class="category__btn">
+          <button class="category__btn" data-filter="*">
             All <span class="category__count">3</span>
           </button>
-          <button class="category__btn">
-            Web <span class="category__count">1</span>
+          <button class="category__btn" data-filter="front-end">
+            Front-end <span class="category__count">1</span>
           </button>
-          <button class="category__btn">
-            Django <span class="category__count">1</span>
+          <button class="category__btn" data-filter="back-end">
+            Back-end <span class="category__count">1</span>
           </button>
-          <button class="category__btn">
+          <button class="category__btn" data-filter="others">
             Others <span class="category__count">1</span>
           </button>
         </div>
@@ -190,6 +190,7 @@
             href="https://github.com/Y0ungZ/Portfolio.git"
             class="project"
             target="_blank"
+            data-type="front-end"
           >
             <img
               class="project__img"
@@ -205,6 +206,7 @@
             href="https://github.com/Y0ungZ/Portfolio.git"
             class="project"
             target="_blank"
+            data-type="back-end"
           >
             <img
               class="project__img"
@@ -220,6 +222,7 @@
             href="https://github.com/Y0ungZ/Portfolio.git"
             class="project"
             target="_blank"
+            data-type="others"
           >
             <img
               class="project__img"
